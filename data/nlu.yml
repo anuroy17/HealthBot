@@ -88,6 +88,7 @@ nlu:
   examples: |
       - [fever](symptom)
       - [rashes](symptom)
+      - [skin rashes](symptom)
       - [cold](symptom)
       - [itching](symptom)
       - [pains](symptom)
@@ -96,6 +97,14 @@ nlu:
       - [fatigue](symptom)
       - [cough](symptom)
       - [headache](symptom)
+      - [muscle weakness](symptom)
+      - [yellowish skin](symptom)
+      - [pain](symptom)
+      - [breathelessness](symptom)
+      - [neck pain](symptom)
+      - [back pain](symptom)
+      - [nausea](symptom)
+      - [vomiting](symptom)
 
   
 
