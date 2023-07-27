@@ -21,10 +21,12 @@ class findDisease(Action):
         #symptom = next(tracker.get_latest_entity_values("symptom"), None)
         
         symptom = tracker.get_slot("symptom")
+        count = 1
             
         for iterator in range(1, 41):
             if symptom in file_data["data"][iterator]["symptoms"]:
                 disease = file_data["data"][iterator]["name"]
-                dispatcher.utter_message(text = f"{iterator}. {disease}")
+                dispatcher.utter_message(text = f"{count}. {disease}")
+                count += 1
                 
         return []
