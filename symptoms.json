@@ -22,10 +22,10 @@
             "id": 2,
             "name": "aids",
             "symptoms": [
-                "muscle_wasting",
-                "patches_in_throat",
+                "muscle wasting",
+                "patches in throat",
                 "fever",
-                "extra_marital_contacts"
+                "extra marital contacts"
             ],
             "description": "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). By damaging your immune system, HIV interferes with your body's ability to fight infection and disease.",
             "precautions": [
@@ -43,9 +43,9 @@
                 "vomiting",
                 "yellowish skin",
                 "abdominal pain",
-                "swelling_of_stomach",
+                "swelling of stomach",
                 "distention of abdomen",
-                "history_of_alcohol_consumption",
+                "history of alcohol consumption",
                 "fluid overload"
             ],
             "description": "Alcoholic hepatitis is a diseased, inflammatory condition of the liver caused by heavy alcohol consumption over an extended period of time. It's also aggravated by binge drinking and ongoing alcohol use. If you develop this condition, you must stop drinking alcohol",
@@ -102,8 +102,8 @@
                 "cough",
                 "fever",
                 "breathlessness",
-                "family_history",
-                "mucoid_sputum"
+                "family history",
+                "mucoid sputum"
             ],
             "description": "Bronchial asthma is a medical condition which causes the airway path of the lungs to swell and narrow. Due to this swelling, the air path produces excess mucus making it hard to breathe, which results in coughing, short breath, and wheezing. The disease is chronic and interferes with daily working.",
             "precautions": [
@@ -141,10 +141,10 @@
                 "rash",
                 "fatigue",
                 "lethargy",
-                "high_fever",
+                "fever",
                 "headache",
-                "loss_of_appetite",
-                "mild_fever",
+                "loss of appetite",
+                "fever",
                 "swelled_lymph_nodes",
                 "malaise",
                 "red spots over body"
@@ -164,10 +164,10 @@
             "symptoms": [
                 "itching",
                 "vomiting",
-                "yellowish_skin",
+                "yellowish skin",
                 "nausea",
                 "loss of appetite",
-                "abdominal_pain",
+                "abdominal pain",
                 "yellowing of eyes"
             ],
             "description": "Chronic cholestatic diseases, whether occurring in infancy, childhood or adulthood, are characterized by defective bile acid transport from the liver to the intestine, which is caused by primary damage to the biliary epithelium in most cases",
@@ -222,10 +222,10 @@
                 "fever",
                 "headache",
                 "nausea",
-                "loss_of_appetite",
-                "pain_behind_the_eyes",
-                "back_pain",
-                "muscle_pain",
+                "loss of appetite",
+                "pain behind the eyes",
+                "back pain",
+                "muscle pain",
                 "red spots over body",
                 "malaise"
             ],
