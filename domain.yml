@@ -29,6 +29,9 @@ responses:
   utter_ask_symptoms:
   - text: "Please tell me your symptoms so I can help you find the right information."
 
+  utter_inform_more:
+  - text: "Do you have any other symptoms?"
+
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
