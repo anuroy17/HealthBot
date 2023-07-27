@@ -17,14 +17,14 @@ class findDisease(Action):
         
             
         with open("symptoms.json", "r") as file:
-            td = json.load(file)
+            file_data = json.load(file)
         #symptom = next(tracker.get_latest_entity_values("symptom"), None)
         
         symptom = tracker.get_slot("symptom")
             
         for iterator in range(1, 41):
-            if symptom in td["data"][iterator]["symptoms"]:
-                disease = td["data"][iterator]["name"]
+            if symptom in file_data["data"][iterator]["symptoms"]:
+                disease = file_data["data"][iterator]["name"]
                 dispatcher.utter_message(text = f"{iterator}. {disease}")
                 
         return []
