@@ -33,6 +33,23 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_ask_symptoms
+  - intent: inform_symptom
+  - action: action_findDisease
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: disease not identified
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_symptoms
+  - intent: inform_symptom
+  - action: action_findDisease
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_inform_more
   - intent: inform_symptom
   - action: action_findDisease
   - action: utter_did_that_help
