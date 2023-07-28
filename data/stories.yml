@@ -29,7 +29,7 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: health issue
+- story: identify disease
   steps:
   - intent: greet
   - action: utter_greet
