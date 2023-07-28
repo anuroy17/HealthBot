@@ -23,9 +23,9 @@ class findDisease(Action):
         symptom = tracker.get_slot("symptom")
         count = 1
             
-        for iterator in range(1, 41):
-            if symptom in file_data["data"][iterator]["symptoms"]:
-                disease = file_data["data"][iterator]["name"]
+        for index in range(41):
+            if symptom in file_data["data"][index]["symptoms"]:
+                disease = file_data["data"][index]["name"]
                 dispatcher.utter_message(text = f"{count}. {disease}")
                 count += 1
                 
