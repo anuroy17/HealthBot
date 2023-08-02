@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Healthbot</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    * {
+      font-size: 1.3vw;
+      font-family: "Epilogue", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      --scrollbarBG: #fff;
+      --thumbBG: #90a4ae;
+    }
+    
+    body {
+      background: linear-gradient(to bottom, #b2d7e2, #fff);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      min-height: 100vh;
+    }
+    
+    .card {
+      width: 90%;
+      background-color: white;
+      box-shadow: 2vw 2vw 12vw 3vw #ccc;
+      padding: 1vw;
+      border-radius: 1.5vw;
+    }
+    
+    .message-section {
+      max-height: 30vw;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+      padding: 0 1vw;
+    }
+    
+    .message {
+      color: #000;
+      margin: 1.5vw 0;
+      padding: 8px;
+      max-width: 85%;
+      word-wrap: break-word;
+    }
+    
+    .input-section {
+      display: flex;
+      align-items: flex-end;
+      padding: 1vw;
+    }
+    
+    input[type="text"] {
+      flex-grow: 1;
+      border: solid #000 0.1vw;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      outline: none;
+      padding: 0.5vw;
+    }
+    
+    .send {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    
+    .send .circle {
+      width: 4.8vw;
+      height: 4.8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .send .circle i {
+      font-size: 3vw;
+      margin-left: -1vw;
+      margin-top: 1vw;
+    }
+    
+    .gif {
+      background-image: url('giphy.gif'); /* Replace with your GIF */
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div id="header">
+      <h1>Chatter box!</h1>
+    </div>
+    <div class="message-section">
+      <div class="message" id="bot"><span id="bot-response">Hello, I am a healthbot! Please tell me your symptoms so I can help you find the right information.</span></div>
+    </div>
+    <div class="input-section">
+      <input id="input" type="text" placeholder="Type a message" autocomplete="off" autofocus="autofocus"/>
+      <button class="send" onclick="sendMessage()">
+        <div class="circle">
+          <i class="fa fa-paper-plane"></i>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div class="gif"></div>
+  <script src="script.js"></script>
+</body>
+</html>
