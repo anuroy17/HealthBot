@@ -57,14 +57,13 @@
 }
 
 .main .bot .message .out{
-    display: flex;
-    flex-direction: row;
+    margin-left: 30px;
 }
 
 .main .bot .message .btn{
     display:flex;
     width: 80%;
-    height: 80%;
+    height: 70%;
     padding: 15px;
     border: none;
     outline: none;
@@ -92,6 +91,7 @@
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 10px;
+    margin-right: 300px;
     outline: none;
     font-size: 20px;
     
@@ -132,4 +132,41 @@
     background-color: #EDF2F7;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.msgalignend{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.msgalignstart{
+    display: flex;
+    justify-content: flex-start;
+    min-height: 5px;
+    
+}
+
+.botmsg{
+    background-color: rgb(205, 173, 241);
+    padding-left: 15px;
+    padding-right: 15px;
+    height:auto;
+    min-height: 45px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    border-radius: 25px;
+    max-width: 20rem;
+}
+
+.usermsg{
+    background-color: rgb(235, 220, 252);
+    padding-left: 15px;
+    padding-right: 15px;
+    height:auto;
+    min-height: 45px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    border-radius: 25px;
+    max-width: 20rem;
+    
 }
