@@ -2,6 +2,7 @@ import json
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import re
 
 class FindDisease(Action):
     def name(self) -> Text:
@@ -16,7 +17,20 @@ class FindDisease(Action):
             file_data = json.load(file)
         
         user_message = tracker.latest_message.get("text")  
-        user_words = user_message.split()  
+
+        def removePunctuations(string):
+            result = ""
+            for letter in string:
+                if not re.match(r"[.,\/#!$%\^&\*;:{}=\-_`~()@?]", letter): 
+                    result += letter
+                else:
+                    result += " "
+            
+            return result
+        user_message_text = removePunctuations(user_message)
+      
+        user_words = user_message_text.split()  
+
         
         all_symptoms = [symptom for entry in file_data["data"] for symptom in entry["symptoms"]]
         
