@@ -80,13 +80,39 @@ class FindDisease(Action):
                 disease_likelihood[disease] = likelihood
         
         
+        max_likelihood = max(disease_likelihood.values())
+
         sorted_diseases = sorted(disease_likelihood.items(), key=lambda x: x[1], reverse=True)
-        
-        count = 1
+
+        i, j, k = 0, 0, 0
+
+        max_probabilities, sig_probabilities, min_probabilities = [], [], []
+
         for disease, likelihood in sorted_diseases:
-            dispatcher.utter_message(text=f"{count}. {disease} (Likelihood: {likelihood})")
-            count += 1
-        
+            if likelihood == max_likelihood:
+                i += 1
+                max_probabilities.append(f"{i}. {disease} ")
+            elif max_likelihood // 2 <= likelihood < max_likelihood:
+                j += 1
+                sig_probabilities.append(f"{j}. {disease} ")
+            elif 1 <= likelihood < max_likelihood // 2:
+                k += 1
+                min_probabilities.append(f"{k}. {disease} ")
+
+        if max_probabilities:
+            dispatcher.utter_message("Diseases having maximum probability include:")
+            dispatcher.utter_message('\n'.join(max_probabilities))
+
+
+        if sig_probabilities:
+            dispatcher.utter_message("Diseases having significant probability include:")
+            dispatcher.utter_message('\n'.join(sig_probabilities))
+
+
+        if min_probabilities:
+            dispatcher.utter_message("Diseases having minimal probability include:")
+            dispatcher.utter_message('\n'.join(min_probabilities))
+       
         return []
 
 
