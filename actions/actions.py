@@ -3,32 +3,52 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-
-class findDisease(Action):
+class FindDisease(Action):
     def name(self) -> Text:
         return "action_findDisease"
-    
     
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text="Possible Diseases:")
         
-        dispatcher.utter_message(text="Here is the list of possible Diseases according to the symptoms you mentioned:")
-        
-            
         with open("symptoms.json", "r") as file:
             file_data = json.load(file)
         
-        input_symptom = tracker.get_slot("symptom")
-        count = 1
+        user_message = tracker.latest_message.get("text")  
+        user_words = user_message.split()  
+        
+        all_symptoms = [symptom for entry in file_data["data"] for symptom in entry["symptoms"]]
+        
+        symptoms = [word for word in user_words if word in all_symptoms]
+        
+        if not symptoms:
+            dispatcher.utter_message("No symptoms found in your input. Please provide some symptoms.")
+            return []
+        
+        disease_likelihood = {}  
+        
+        for entry in file_data["data"]:
+            disease = entry["name"]
+            symptom_list = entry["symptoms"]
             
-        for index in range(41):
-            if input_symptom in file_data["data"][index]["symptoms"]:
-                disease = file_data["data"][index]["name"]
-                dispatcher.utter_message(text = f"{count}. {disease}")
-                count += 1
-                
+            # Calculate a likelihood score for the disease based on the presence of symptoms
+            likelihood = sum(1 for symptom in symptoms if symptom in symptom_list)
+            
+            if likelihood > 0:  
+                disease_likelihood[disease] = likelihood
+        
+        
+        sorted_diseases = sorted(disease_likelihood.items(), key=lambda x: x[1], reverse=True)
+        
+        count = 1
+        for disease, likelihood in sorted_diseases:
+            dispatcher.utter_message(text=f"{count}. {disease} (Likelihood: {likelihood})")
+            count += 1
+        
         return []
+
+
     
 class giveMoreInformation(Action):
     def name(self) -> Text:
