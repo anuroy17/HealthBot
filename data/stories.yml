@@ -69,9 +69,4 @@ stories:
   - intent: affirm
   - action: utter_goodbye
 
-- story: know symptoms of disease
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: inform_diesease
 
