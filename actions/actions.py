@@ -3,6 +3,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import re
+from spellchecker import SpellChecker
 
 class FindDisease(Action):
     def name(self) -> Text:
@@ -31,13 +32,33 @@ class FindDisease(Action):
       
         user_words = user_message_text.split()  
 
+        spell = SpellChecker()
+        
+        
+        corrected_input = []
+
+        for word in user_words:
+            if word not in spell:                
+                corrected_word = spell.correction(word)
+                corrected_input.append(corrected_word)
+                
+                
+                dispatcher.utter_message(text=f"Did you mean: '{corrected_word}'?")
+                dispatcher.utter_message(text=f"Showing results for: '{corrected_word}'")
+            else:
+                corrected_input.append(word)
+
+
+
+
         
         all_symptoms = [symptom for entry in file_data["data"] for symptom in entry["symptoms"]]
         
-        symptoms = [word for word in user_words if word in all_symptoms]
+        symptoms = [word for word in corrected_input if word in all_symptoms]
+
 
         for k in range(2,5):
-            word_combinations = [' '.join(user_words[i:i+k]) for i in range(len(user_words) - 1)]
+            word_combinations = [' '.join(corrected_input[i:i+k]) for i in range(len(corrected_input) - 1)]
         for combo in word_combinations:
             if combo in all_symptoms:
                 symptoms.append(combo)
