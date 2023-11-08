@@ -21,6 +21,12 @@ class FindDisease(Action):
         all_symptoms = [symptom for entry in file_data["data"] for symptom in entry["symptoms"]]
         
         symptoms = [word for word in user_words if word in all_symptoms]
+
+        for k in range(2,5):
+            word_combinations = [' '.join(user_words[i:i+k]) for i in range(len(user_words) - 1)]
+        for combo in word_combinations:
+            if combo in all_symptoms:
+                symptoms.append(combo)
         
         if not symptoms:
             dispatcher.utter_message("No symptoms found in your input. Please provide some symptoms.")
