@@ -43,6 +43,8 @@ nlu:
   examples: |
     - no
     - n
+    - did not help
+    - not
     - never
     - I don't think so
     - don't like that
@@ -83,7 +85,50 @@ nlu:
     - so saad
     - so sad
   
-
+- intent: inform_disease
+  examples: |
+      - [acne](disease)
+      - [aids](disease)
+      - [alcoholic hepatitis](disease)
+      - [cold allergy](disease)
+      - [arthritis](disease)
+      - [bronchial asthma](disease)
+      - [cervical spondylosis](disease)
+      - [chicken pox](disease)
+      - [chronic cholestasis](disease)
+      - [common cold](disease)
+      - [dengue](disease)
+      - [diabetes](disease)
+      - [piles](disease)
+      - [drug reaction](disease)
+      - [fungal infection](disease)
+      - [gastroenteritis](disease)
+      - [gerd](disease)
+      - [heart attack](disease)
+      - [hepatitis a](disease)
+      - [hepatitis b](disease)
+      - [hepatitis c](disease)
+      - [hepatitis d](disease)
+      - [hepatitis e](disease)
+      - [hypertension](disease)
+      - [hyperthyroidism](disease)
+      - [hypoglycemia](disease)
+      - [hypothyroidism](disease)
+      - [impetigo](disease)
+      - [jaundice](disease)
+      - [malaria](disease)
+      - [migraine](disease)
+      - [osteoarthristis](disease)
+      - [paralysis](disease)
+      - [vertigo](disease)
+      - [peptic ulcer disease](disease)
+      - [pneumonia](disease)
+      - [psoriasis](disease)
+      - [tuberculosis](disease)
+      - [typhoid](disease)
+      - [urinary tract infection](disease)
+      - [varicose veins](disease)
+      
 - intent: inform_symptom
   examples: |
       - [fever](symptom)

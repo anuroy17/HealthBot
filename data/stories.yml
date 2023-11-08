@@ -38,7 +38,20 @@ stories:
   - action: action_findDisease
   - action: utter_did_that_help
   - intent: affirm
+  
+
+- story: know more
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_know_more
+  - intent: affirm
+  - intent: inform_disease
+  - action: action_giveMoreInformation
+  - action: utter_did_that_help
+  - intent: affirm
   - action: utter_goodbye
+
 
 - story: disease not identified
   steps:
@@ -55,3 +68,10 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
+
+- story: know symptoms of disease
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform_diesease
+

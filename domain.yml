@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - inform_symptom
+  - inform_disease
 
 responses:
   utter_greet:
@@ -29,6 +30,9 @@ responses:
   utter_ask_symptoms:
   - text: "Please tell me your symptoms so I can help you find the right information."
 
+  utter_know_more:
+  - text: "Would like to know more about any of the disease?"
+
   utter_inform_more:
   - text: "Do you have any other symptoms?"
 
@@ -37,9 +41,11 @@ responses:
 
 actions:
   - action_findDisease
+  - action_giveMoreInformation
 
 entities:
   - symptom
+  - disease
 
 slots:
   symptom:
@@ -47,6 +53,11 @@ slots:
     mappings:
       - type: from_entity
         entity: symptom
+  disease:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: disease
 
 
   

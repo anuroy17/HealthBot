@@ -39,7 +39,7 @@
         },
         {
             "id": 3,
-            "name": "alcoholic_hepatitis",
+            "name": "alcoholic hepatitis",
             "symptoms": [
                 "vomiting",
                 "vomitings",
@@ -61,7 +61,7 @@
         },
         {
             "id": 4,
-            "name": "allergy",
+            "name": "cold allergy",
             "symptoms": [
                 "continuous sneezing",
                 "shivering",
@@ -101,7 +101,7 @@
         },
         {
             "id": 6,
-            "name": "bronchial_asthma",
+            "name": "bronchial asthma",
             "symptoms": [
                 "fatigue",
                 "cough",
@@ -121,7 +121,7 @@
         },
         {
             "id": 7,
-            "name": "cervical_spondylosis",
+            "name": "cervical spondylosis",
             "symptoms": [
                 "back pain",
                 "weakness in limbs",
@@ -141,7 +141,7 @@
         },
         {
             "id": 8,
-            "name": "chicken_pox",
+            "name": "chicken pox",
             "symptoms": [
                 "itching",
                 "rash",
@@ -167,7 +167,7 @@
         },
         {
             "id": 9,
-            "name": "chronic_cholestasis",
+            "name": "chronic cholestasis",
             "symptoms": [
                 "itching",
                 "vomiting",
@@ -189,7 +189,7 @@
         },
         {
             "id": 10,
-            "name": "common_cold",
+            "name": "common cold",
             "symptoms": [
                 "continuous sneezing",
                 "chills",
@@ -273,7 +273,7 @@
         },
         {
             "id": 13,
-            "name": "dimorphic_hemorrhoids(piles)",
+            "name": "piles",
             "symptoms": [
                 "constipation",
                 "pain during bowel movements",
@@ -292,7 +292,7 @@
         },
         {
             "id": 14,
-            "name": "drug_reaction",
+            "name": "drug reaction",
             "symptoms": [
                 "itching",
                 "skin rash",
@@ -311,7 +311,7 @@
         },
         {
             "id": 15,
-            "name": "fungal_infection",
+            "name": "fungal infection",
             "symptoms": [
                 "itching",
                 "skin rash",
@@ -367,7 +367,7 @@
         },
         {
             "id": 18,
-            "name": "heart_attack",
+            "name": "heart attack",
             "symptoms": [
                 "vomiting",
                 "breathlessness",
@@ -384,7 +384,7 @@
         },
         {
             "id": 19,
-            "name": "hepatitis_a",
+            "name": "hepatitis a",
             "symptoms": [
                 "joint pain",
                 "vomiting",
@@ -409,7 +409,7 @@
         },
         {
             "id": 20,
-            "name": "hepatitis_b",
+            "name": "hepatitis b",
             "symptoms": [
                 "itching",
                 "fatigue",
@@ -435,7 +435,7 @@
         },
         {
             "id": 21,
-            "name": "hepatitis_c",
+            "name": "hepatitis c",
             "symptoms": [
                 "fatigue",
                 "yellowish skin",
@@ -455,7 +455,7 @@
         },
         {
             "id": 22,
-            "name": "hepatitis_d",
+            "name": "hepatitis d",
             "symptoms": [
                 "joint pain",
                 "vomiting",
@@ -478,7 +478,7 @@
         },
         {
             "id": 23,
-            "name": "hepatitis_e",
+            "name": "hepatitis e",
             "symptoms": [
                 "joint pain",
                 "vomiting",
@@ -708,7 +708,7 @@
         },
         {
             "id": 33,
-            "name": "paralysis_(brain_hemorrhage)",
+            "name": "paralysis",
             "symptoms": [
                 "vomiting",
                 "headache",
@@ -726,7 +726,7 @@
         },
         {
             "id": 34,
-            "name": "paroymsal_positional_vertigo_(vertigo)",
+            "name": "vertigo",
             "symptoms": [
                 "vomiting",
                 "headache",
@@ -746,7 +746,7 @@
         },
         {
             "id": 35,
-            "name": "peptic ulcer diseae",
+            "name": "peptic ulcer disease",
             "symptoms": [
                 "vomiting",
                 "loss of appetite",
@@ -866,7 +866,7 @@
         },
         {
             "id": 40,
-            "name": "urinary_tract_infection",
+            "name": "urinary tract infection",
             "symptoms": [
                 "burning micturition",
                 "bladder discomfort",
@@ -884,7 +884,7 @@
         },
         {
             "id": 41,
-            "name": "varicose_veins",
+            "name": "varicose veins",
             "symptoms": [
                 "fatigue",
                 "cramps",
