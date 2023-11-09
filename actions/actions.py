@@ -112,6 +112,8 @@ class FindDisease(Action):
         if min_probabilities:
             dispatcher.utter_message("Diseases having minimal probability include:")
             dispatcher.utter_message('\n'.join(min_probabilities))
+        dispatcher.utter_message("Disclaimer:\nHealthBot is designed to provide diagnostic suggestions, but you should not rely on the information provided as a substitute for professional advice. Please be aware that the chatbot is an automated system, and it may not always provide 100% accurate information.")
+
        
         return []
 
@@ -138,7 +140,11 @@ class giveMoreInformation(Action):
                 dispatcher.utter_message(text = f"{information}")
                 dispatcher.utter_message(text = "Things to do to avoid severity:")
                 precautionToTake = file_data["data"][index]["precautions"]
+                i = 1
                 for statement in precautionToTake:
-                    dispatcher.utter_message(text = f"{statement}")
+                    dispatcher.utter_message(text=f"{i}. {statement}")
+                    i += 1
+        dispatcher.utter_message("Disclaimer:\nHealthBot is designed to provide medical data, but you should not rely on the information provided as a substitute for professional advice. Please be aware that the chatbot is an automated system, and it may not always provide 100% accurate information.")
+                
                 
         return []
