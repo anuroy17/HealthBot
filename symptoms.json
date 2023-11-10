@@ -8,7 +8,7 @@
                 "rashes",
                 "pimples",
                 "blackheads",
-                "scurring"
+                "scarring"
             ],
             "description": "Acne vulgaris is the formation of comedones, papules, pustules, nodules, and/or cysts as a result of obstruction and inflammation of pilosebaceous units (hair follicles and their accompanying sebaceous gland). Acne develops on the face and upper trunk. It most often affects adolescents.",
             "precautions": [
@@ -21,7 +21,7 @@
         },
         {
             "id": 2,
-            "name": "aids",
+            "name": "AIDS",
             "symptoms": [
                 "muscle wasting",
                 "patches in throat",
@@ -281,7 +281,7 @@
                 "bloody stool",
                 "irritation in anus"
             ],
-            "description": "Hemorrhoids, also spelled haemorrhoids, are vascular structures in the anal canal. In their ... Other names, Haemorrhoids, piles, hemorrhoidal disease .",
+            "description": "Hemorrhoids, also called piles, are swollen and inflamed veins around your anus or in your lower rectum.",
             "precautions": [
                 "avoid fatty spicy food",
                 "consume witch hazel",
@@ -318,10 +318,10 @@
                 "nodal skin eruptions",
                 "dischromic patches"
             ],
-            "description": "In humans, fungal infections occur when an invading fungus takes over an area of the body and is too much for the immune system to handle. Fungi can live in the air, soil, water, and plants. There are also some fungi that live naturally in the human body. Like many microbes, there are helpful fungi and harmful fungi.",
+            "description": "Fungal Infections (Mycosis) Fungal infections are any disease or condition you get from a fungus. They usually affect your skin, hair, nails or mucous membranes but they can also infect your lungs or other parts of your body. You're at higher risk for fungal infections if you have a weakened immune system.",
             "precautions": [
                 "bath twice",
-                "use detol or neem in bathing water",
+                "use dettol or neem in bathing water",
                 "keep infected area dry",
                 "use clean cloths"
             ],
@@ -336,7 +336,7 @@
                 "dehydration",
                 "diarrhoea"
             ],
-            "description": "Gastroenteritis is an inflammation of the digestive tract, particularly the stomach, and large and small intestines. Viral and bacterial gastroenteritis are intestinal infections associated with symptoms of diarrhea , abdominal cramps, nausea , and vomiting .",
+            "description": "Gastroenteritis is an inflammation of the digestive tract, particularly the stomach, and large and small intestines. Viral and bacterial gastroenteritis are intestinal infections associated with symptoms of diarrhea, abdominal cramps, nausea, and vomiting.",
             "precautions": [
                 "stop eating solid food for while",
                 "try taking small sips of water",
@@ -347,7 +347,7 @@
         },
         {
             "id": 17,
-            "name": "gerd",
+            "name": "GERD",
             "symptoms": [
                 "stomach pain",
                 "acidity",
@@ -398,12 +398,12 @@
                 "yellowing of eyes",
                 "muscle pain"
             ],
-            "description": "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus. The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function.",
+            "description": "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus((HAV)). The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function.",
             "precautions": [
-                "Consult nearest hospital",
+                "consult nearest hospital immediately",
                 "wash hands through",
                 "avoid fatty spicy food",
-                "medication"
+                "avoid alcohol and anything else that is toxic to the liver, such as acetaminophen, or Tylenol"
             ],
             "symptom_id": "#001#029#032#058#062#066#070#073#124#132#133"
         },
@@ -513,7 +513,7 @@
                 "loss of balance",
                 "lack of concentration"
             ],
-            "description": "Hypertension (HTN or HT), also known as high blood pressure (HBP), is a long-term medical condition in which the blood pressure in the arteries is persistently elevated. High blood pressure typically does not cause symptoms.",
+            "description": "Hypertension (HTN or HT), also known as high blood pressure (HBP), is a long-term medical condition in which the blood pressure in the arteries is persistently elevated. ",
             "precautions": [
                 "meditation",
                 "salt baths",
@@ -718,9 +718,9 @@
             "description": "Intracerebral hemorrhage (ICH) is when blood suddenly bursts into brain tissue, causing damage to your brain. Symptoms usually appear suddenly during ICH. They include headache, weakness, confusion, and paralysis, particularly on one side of your body.",
             "precautions": [
                 "massage",
-                "eat healthy",
-                "exercise",
-                "consult doctor"
+                "medicines to relieve problems such as pain, stiffness and muscle spasms",
+                "physiotherapy to maintain strength and muscle mass",
+                "consult doctor regularly"
             ],
             "symptom_id": "#005#046#124#127"
         },
@@ -782,8 +782,8 @@
             ],
             "description": "Pneumonia is an infection in one or both lungs. Bacteria, viruses, and fungi cause it. The infection causes inflammation in the air sacs in your lungs, which are called alveoli. The alveoli fill with fluid or pus, making it difficult to breathe.",
             "precautions": [
-                "consult doctor",
-                "medication",
+                "consult doctor immediately",
+                "adhere to medication",
                 "rest",
                 "follow up"
             ],
@@ -857,8 +857,8 @@
             ],
             "description": "An acute illness characterized by fever caused by infection with the bacterium Salmonella typhi. Typhoid fever has an insidious onset, with fever, headache, constipation, malaise, chills, and muscle pain. Diarrhea is uncommon, and vomiting is not usually severe.",
             "precautions": [
-                "eat high calorie vegitables",
-                "antiboitic therapy",
+                "eat high calorie vegetables",
+                "antibiotic therapy",
                 "consult doctor",
                 "medication"
             ],
@@ -897,7 +897,7 @@
             "description": "A vein that has enlarged and twisted, often appearing as a bulging, blue blood vessel that is clearly visible through the skin. Varicose veins are most common in older adults, particularly women, and occur especially on the legs.",
             "precautions": [
                 "lie down flat and raise the leg high",
-                "use oinments",
+                "use ointments",
                 "use vein compression",
                 "dont stand still for long"
             ],
