@@ -131,11 +131,14 @@ class giveMoreInformation(Action):
         
         with open("symptoms.json", "r") as file:
             file_data = json.load(file)
-        
+        spell = SpellChecker() 
         input_disease = tracker.get_slot("disease")
+        input_disease_corrected = spell.correction(input_disease)
+        dispatcher.utter_message(text=f"Did you mean: '{input_disease_corrected}'?")
+        dispatcher.utter_message(text=f"Showing results for: '{input_disease_corrected}'")
         
         for index in range(41):
-            if input_disease == file_data["data"][index]["name"]:
+            if input_disease_corrected == file_data["data"][index]["name"]:
                 information = file_data["data"][index]["description"]
                 dispatcher.utter_message(text = f"{information}")
                 dispatcher.utter_message(text = "Things to do to avoid severity:")
