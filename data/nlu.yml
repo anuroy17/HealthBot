@@ -88,7 +88,7 @@ nlu:
 - intent: inform_disease
   examples: |
       - [acne](disease)
-      - [aids](disease)
+      - [AIDS](disease)
       - [alcoholic hepatitis](disease)
       - [cold allergy](disease)
       - [arthritis](disease)
@@ -103,7 +103,7 @@ nlu:
       - [drug reaction](disease)
       - [fungal infection](disease)
       - [gastroenteritis](disease)
-      - [gerd](disease)
+      - [GERD](disease)
       - [heart attack](disease)
       - [hepatitis a](disease)
       - [hepatitis b](disease)

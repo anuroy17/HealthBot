@@ -127,16 +127,22 @@ class giveMoreInformation(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        dispatcher.utter_message(text = "Here is the more information about the disease:")
+        
         
         with open("symptoms.json", "r") as file:
             file_data = json.load(file)
-        spell = SpellChecker() 
-        input_disease = tracker.get_slot("disease")
-        input_disease_corrected = spell.correction(input_disease)
-        dispatcher.utter_message(text=f"Did you mean: '{input_disease_corrected}'?")
-        dispatcher.utter_message(text=f"Showing results for: '{input_disease_corrected}'")
+
+            
+        spell = SpellChecker()
+        spell.word_frequency.load_text_file('custom_dictionary.txt')
+        input_disease= tracker.get_slot("disease")       
         
+        input_disease_words = input_disease.split()  
+
+        input_disease_corrected = ' '.join(spell.correction(word) for word in input_disease_words)
+                
+        dispatcher.utter_message(text=f"Showing results for: '{input_disease_corrected}'")
+        dispatcher.utter_message(text = "Here is more information about the disease:")
         for index in range(41):
             if input_disease_corrected == file_data["data"][index]["name"]:
                 information = file_data["data"][index]["description"]
