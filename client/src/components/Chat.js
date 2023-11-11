@@ -39,7 +39,7 @@ const Chat = () => {
 
     const handleSubmit=(evt)=>{
         evt.preventDefault();
-        const name = "shreyas";
+        const name = "botuser";
         const request_temp = {sender : "user", sender_id : name , msg : inputMessage};
         
         if(inputMessage !== ""){
@@ -74,11 +74,11 @@ const Chat = () => {
       .then((response) => {
           if(response){
               const temp = response[0];
-              const recipient_id = temp["recipient_id"];
-              const recipient_msg = temp["text"];        
+              const recipient_id = temp["recipient_id"];     
+              const combinedResponse = response.map((res) => res.text).join('\n');  
 
 
-              const response_temp = {sender: "bot",recipient_id : recipient_id,msg: recipient_msg};
+              const response_temp = {sender: "bot",recipient_id : recipient_id,msg: combinedResponse};
               setbotTyping(false);
               
               setChat(chat => [...chat, response_temp]);
@@ -151,7 +151,7 @@ const Chat = () => {
         <div className='head'>
           <div className='boticon'><SmartToyIcon sx={{ fontSize: 40 }}/></div>
           <h1>HealthBot</h1>
-          {botTyping ? <h6>Bot Typing....</h6> : <h6>bot not typing</h6>}
+          {botTyping ? <h6>Bot Typing....</h6> : ""}
         </div>
 
 
