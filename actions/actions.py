@@ -147,12 +147,14 @@ class giveMoreInformation(Action):
             if input_disease_corrected == file_data["data"][index]["name"]:
                 information = file_data["data"][index]["description"]
                 dispatcher.utter_message(text = f"{information}")
+                dispatcher.utter_message(text = "Symptoms of the disease:")
+                symptoms_of_disease = file_data["data"][index]["symptoms"]
+                for s in symptoms_of_disease:
+                    dispatcher.utter_message(text =f"{s}")
                 dispatcher.utter_message(text = "Things to do to avoid severity:")
                 precautionToTake = file_data["data"][index]["precautions"]
-                i = 1
                 for statement in precautionToTake:
-                    dispatcher.utter_message(text=f"{i}. {statement}")
-                    i += 1
+                    dispatcher.utter_message(text=f"{statement}")
         dispatcher.utter_message("Disclaimer:\nHealthBot is designed to provide medical data, but you should not rely on the information provided as a substitute for professional advice. Please be aware that the chatbot is an automated system, and it may not always provide 100% accurate information.")
                 
                 
