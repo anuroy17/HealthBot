@@ -112,7 +112,7 @@ class FindDisease(Action):
         if min_probabilities:
             dispatcher.utter_message("Diseases having minimal probability include:")
             dispatcher.utter_message('\n'.join(min_probabilities))
-        dispatcher.utter_message("Disclaimer:\nHealthBot is designed to provide diagnostic suggestions, but you should not rely on the information provided as a substitute for professional advice. Please be aware that the chatbot is an automated system, and it may not always provide 100% accurate information.")
+        dispatcher.utter_message("Remember, it's crucial to consult with a healthcare professional to determine the exact cause of your symptoms and receive appropriate care. They can provide personalized advice and guide you through the next steps.")
 
        
         return []
@@ -155,7 +155,7 @@ class giveMoreInformation(Action):
                 precautionToTake = file_data["data"][index]["precautions"]
                 for statement in precautionToTake:
                     dispatcher.utter_message(text=f"{statement}")
-        dispatcher.utter_message("Disclaimer:\nHealthBot is designed to provide medical data, but you should not rely on the information provided as a substitute for professional advice. Please be aware that the chatbot is an automated system, and it may not always provide 100% accurate information.")
+        dispatcher.utter_message("Remember, it's crucial to consult with a healthcare professional to determine the exact cause of your symptoms and receive appropriate care. They can provide personalized advice and guide you through the next steps.")
                 
                 
         return []

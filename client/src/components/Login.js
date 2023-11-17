@@ -56,7 +56,7 @@ const Login = () => {
     
                if(res.status === 201){
                 localStorage.setItem("usersdatatoken",res.result.token)
-                history("/dash")
+                history("/chat")
                 setInpval({...inpval,email:"",password:""});
                }
         }
