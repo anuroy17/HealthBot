@@ -12,7 +12,7 @@ class FindDisease(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text="Possible Diseases:")
+        dispatcher.utter_message(text=("Possible Diseases:"))
         
         with open("symptoms.json", "r") as file:
             file_data = json.load(file)

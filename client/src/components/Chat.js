@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Chat.css";
+import { useNavigate } from "react-router-dom";
+import { LoginContext } from "./ContextProvider/Context";
 
 import Box from "@mui/material/Box";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
@@ -7,9 +9,39 @@ import SendIcon from "@mui/icons-material/Send";
 import Avatar from "@mui/material/Avatar";
 
 const Chat = () => {
+  const { logindata, setLoginData } = useContext(LoginContext);
+  console.log(logindata);
+
+  const history = useNavigate();
+
+  const ChatValid = async () => {
+    let token = localStorage.getItem("usersdatatoken");
+
+    const res = await fetch("/validuser", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: token,
+      },
+    });
+
+    const data = await res.json();
+
+    if (data.status == 401 || !data) {
+      history("*");
+    } else {
+      console.log("User verify");
+      setLoginData(data);
+      history("/chat");
+    }
+  };
   const [chat, setChat] = useState([]);
   const [inputMessage, setInputMessage] = useState("");
   const [botTyping, setbotTyping] = useState(false);
+
+  useEffect(() => {
+    ChatValid();
+  }, []);
 
   useEffect(() => {
     console.log("called");
@@ -77,7 +109,7 @@ const Chat = () => {
   return (
     <div className="main">
       <div className="nav">
-        <Box sx={{ width: "100%", bgcolor: "#53A57D" }}>
+        <Box sx={{ width: "100%", bgcolor: "#89CFAD" }}>
           <p>
             <h3> Disclaimer: </h3>
             HealthBot is designed to provide diagnostic suggestions, but you
@@ -91,7 +123,7 @@ const Chat = () => {
       <div className="bot">
         <div className="head">
           <div className="boticon">
-            <SmartToyIcon sx={{ fontSize: 45 }} />
+            <SmartToyIcon sx={{ fontSize: 40 }} />
           </div>
           <h1>HealthBot</h1>
           {botTyping ? <h6>Bot Typing....</h6> : ""}
@@ -106,13 +138,20 @@ const Chat = () => {
                     className="msgalignstart"
                     style={{ whiteSpace: "pre-line" }}
                   >
-                    <SmartToyIcon  style={{ background: "#53A57D" , color: "#fff", fontSize: 35, borderRadius: '50%'}} />
+                    <SmartToyIcon
+                      style={{
+                        background: "#89CFAD",
+                        color: "#fff",
+                        fontSize: 35,
+                        borderRadius: "50%",
+                      }}
+                    />
                     <p className="botmsg">{user.msg}</p>
                   </div>
                 ) : (
                   <div className="msgalignend">
                     <p className="usermsg">{user.msg}</p>
-                    <Avatar style={{ background: "#53A57D" , fontSize: 30}} />
+                    <Avatar style={{ background: "#89CFAD", fontSize: 25 }} />
                   </div>
                 )}
               </div>
